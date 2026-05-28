@@ -48,4 +48,4 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Restart WebApp
-        run: 
+        run: |
