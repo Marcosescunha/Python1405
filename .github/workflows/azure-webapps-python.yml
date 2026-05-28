@@ -1,7 +1,7 @@
 name: Build and deploy a container to an Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: 'app21'
+  AZURE_WEBAPP_NAME: 'app21' mudar
 
 on:
   push:
@@ -24,18 +24,18 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Login no ACR
-        run: az acr login --name acr21
+        run: az acr login --name acr21 mudar
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker
         run: |
-          docker build -t acr21-htgbfzbtdue4gxcw.azurecr.io/minha-app:latest .
+          docker build -t acr21-htgbfzbtdue4gxcw.azurecr.io/minha-app:latest . mudar
 
       - name: Push Docker
         run: |
-          docker push acr21-htgbfzbtdue4gxcw.azurecr.io/minha-app:latest
+          docker push acr21-htgbfzbtdue4gxcw.azurecr.io/minha-app:latest mudar
 
   deploy:
     runs-on: ubuntu-latest
